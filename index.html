@@ -3,38 +3,50 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My HTML5 Page</title>
+    <title>To-do list-Tiyasa</title>
     
     <!-- CSS External File -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
+    <!-- header section  -->
+     <header>
+        <h1 class="text-3xl font-bold">My Todo List</h1>
+     </header>
+
+     <!-- main content section  -->
+     <main>
+        <section class="my-4">
+            <div class="flex gap-2 mb-4">
+                <input type="text" class="border rounded p-2" id="todo-input" placeholder="add new tasks...">
+                <input type="date" class="border rounded p-2" id="todo-date" placeholder="select due date...">
+                <button class="bg-blue-500 text white rounded p-2" onclick="addTasks()">Add</button>
+            </div>
+            <ul id="todo-list"></ul>
+        </section>
+
+        <!-- action button section -->
+        <section class="flex justify-between my-[8px]">
+            <button id="filter-btn">Filter</button>
+            <button id="delete-all-btn" onclick="deleteAllTasks()"> Delete All Tasks</button>
+        </section>
+
+        <section class="my-4">
+            <h2>List of Tasks</h2>
+            <ul id ="task-list">
+                <!-- Task will be dynamically added here  -->
+                 <li>No tasks added yet</li>
+        </section>
+     </main>
+
+     <!-- footer section  -->
+      <footer>
+        <p class="text-sm">&copy; 2025 Tiyasa Todo List</p>
+      </footer>
     <!-- Javascript External File -->
     <script src="js/script.js"></script>
-        <h1>Welcome</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="home">
-        <section>
-            <h2>Getting started</h2>
-            <p>Replace this content with your project.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span></p>
-    </footer>
-
-    <script>
-        // Minimal JS: set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+       
 </body>
+
 </html>
